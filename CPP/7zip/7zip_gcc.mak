@@ -18,7 +18,7 @@ PROGPATH_STATIC = $(O)/$(PROG)s
 
 
 ifneq ($(CC), xlc)
-CFLAGS_WARN_WALL = -Wall -Werror -Wextra
+CFLAGS_WARN_WALL = -Wall -Werror -Wextra -Wno-cast-function-type
 endif
 
 # for object file
@@ -97,7 +97,7 @@ PROGPATH_STATIC = $(O)/$(PROG)s$(SHARED_EXT)
 	
 ifdef IS_MINGW
 
-RM = del
+RM = rm
 MY_MKDIR=mkdir
 LIB2_GUI = -lOle32 -lGdi32 -lComctl32 -lComdlg32
 LIB2 = -loleaut32 -luuid -ladvapi32 -lUser32 $(LIB2_GUI)
@@ -105,7 +105,7 @@ LIB2 = -loleaut32 -luuid -ladvapi32 -lUser32 $(LIB2_GUI)
 CXXFLAGS_EXTRA = -DUNICODE -D_UNICODE
 # -Wno-delete-non-virtual-dtor
 
-DEL_OBJ_EXE = -$(RM) $(O)\*.o $(O)\$(PROG).exe $(O)\$(PROG).dll
+DEL_OBJ_EXE = -$(RM) $(O)/*.o $(O)/$(PROG).exe $(O)/$(PROG).dll
  
 else
 
