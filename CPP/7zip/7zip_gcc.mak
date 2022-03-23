@@ -97,7 +97,7 @@ PROGPATH_STATIC = $(O)/$(PROG)s$(SHARED_EXT)
 	
 ifdef IS_MINGW
 
-RM = rm
+RM = rm -f
 MY_MKDIR=mkdir
 LIB2_GUI = -lole32 -lgdi32 -lcomctl32 -lcomdlg32
 LIB2 = -loleaut32 -luuid -ladvapi32 -luser32 $(LIB2_GUI)
@@ -105,7 +105,7 @@ LIB2 = -loleaut32 -luuid -ladvapi32 -luser32 $(LIB2_GUI)
 CXXFLAGS_EXTRA = -DUNICODE -D_UNICODE
 # -Wno-delete-non-virtual-dtor
 
-DEL_OBJ_EXE = -$(RM) $(O)/*.o $(O)/$(PROG).exe $(O)/$(PROG).dll
+DEL_OBJ_EXE = -$(RM) $(O)/*.o $(O)/*.a $(O)/$(PROG).exe $(O)/$(PROG).dll
  
 else
 
