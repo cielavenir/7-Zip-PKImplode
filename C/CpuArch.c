@@ -351,7 +351,7 @@ BoolInt CPU_IsSupported_PageGB()
 
 #ifdef _WIN32
 
-#include <Windows.h>
+#include <windows.h>
 
 BoolInt CPU_IsSupported_CRC32()  { return IsProcessorFeaturePresent(PF_ARM_V8_CRC32_INSTRUCTIONS_AVAILABLE) ? 1 : 0; }
 BoolInt CPU_IsSupported_CRYPTO() { return IsProcessorFeaturePresent(PF_ARM_V8_CRYPTO_INSTRUCTIONS_AVAILABLE) ? 1 : 0; }
