@@ -14,8 +14,7 @@ REGISTER_CODEC_E(
   ZSTD,
   NCompress::NZSTD::CDecoder(),
   NCompress::NZSTD::CEncoder(),
-  /*0x4F71101*/ 0x40100+93, "ZSTD")
-
+  0x4F71101, "ZSTD")
 
   /*
     CreateDec函数返回CDecoder类指针

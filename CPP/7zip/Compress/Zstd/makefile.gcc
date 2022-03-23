@@ -36,6 +36,7 @@ COMPRESS_OBJS_2 = \
   $O/DllExportsCompress.o \
   $O/Alloc.o \
   $O/ZstdRegister.o \
+  $O/ZstdZipRegister.o \
   $O/ZstdEncoder.o \
   $O/ZstdDecoder.o \
   $O/libzstd.a \
@@ -48,6 +49,8 @@ OBJS = \
 include ../../7zip_gcc.mak
 
 $O/ZstdRegister.o: Compress/ZstdRegister.cpp
+	$(CXX) $(CXXFLAGS) $<
+$O/ZstdZipRegister.o: Compress/ZstdZipRegister.cpp
 	$(CXX) $(CXXFLAGS) $<
 $O/ZstdEncoder.o: Compress/ZstdEncoder.cpp
 	$(CXX) $(CXXFLAGS) $<
