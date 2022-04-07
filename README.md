@@ -1,3 +1,5 @@
+Archived; moved to https://github.com/cielavenir/p7zip/tree/main/
+
 # 7-Zip
 
 Some case fixes to enable mingw build on Linux.
